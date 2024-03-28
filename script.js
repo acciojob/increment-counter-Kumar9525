@@ -1,23 +1,9 @@
-//your JS code here. If required.
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-  // Get references to the counter paragraph and the increment button
-  const counterParagraph = document.getElementById('counter');
-  const incrementButton = document.getElementById('incrementBtn');
+describe("Increment Counter", () => {
+  const baseUrl = "http://localhost:3000"; // assuming the app is running locally on port 3000
 
-  // Add click event listener to the increment button
-  incrementButton.addEventListener('click', function() {
-    // Get the current value of the counter
-    let counterValue = parseInt(counterParagraph.textContent);
-    
-    // Display alert with the current value before incrementing
-    alert("Current Counter Value: " + counterValue);
-    
-    // Increment the counter value
-    counterValue++;
-    
-    // Update the counter paragraph with the new value
-    counterParagraph.textContent = counterValue;
+  it("increments the counter when the button is clicked", () => {
+    cy.visit(baseUrl);
+    cy.get('#incrementBtn').click();
+    cy.get('#counter').should('have.text', '1');
   });
+});

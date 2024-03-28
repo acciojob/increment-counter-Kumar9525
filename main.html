@@ -11,6 +11,16 @@
 <button id="incrementBtn">Increment</button>
 	<!-- the entire body must be written by student -->
     <script type="text/javascript" src="./script.js">
+
+		 const counterParagraph = document.getElementById('counter');
+  const incrementButton = document.getElementById('incrementBtn');
+
+  incrementButton.addEventListener('click', function() {
+    let counterValue = parseInt(counterParagraph.textContent);
+    alert("Current Counter Value: " + counterValue);
+    counterValue++;
+    counterParagraph.textContent = counterValue;
+  });
 </script>
 
 </body>
