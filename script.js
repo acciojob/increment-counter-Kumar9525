@@ -3,15 +3,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Increment Counter</title>
-</head>
-<body>
-
-<p id="counter">0</p>
-<button id="incrementBtn">Increment</button>
-
-<script>
   // Get references to the counter paragraph and the increment button
   const counterParagraph = document.getElementById('counter');
   const incrementButton = document.getElementById('incrementBtn');
@@ -30,7 +21,3 @@
     // Update the counter paragraph with the new value
     counterParagraph.textContent = counterValue;
   });
-</script>
-
-</body>
-</html>
