@@ -1,28 +1,33 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Increment Counter</title>
 </head>
-
 <body>
-	<p id="counter">1</p>
-<button id="incrementBtn">Increment</button>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
+  <p id="counter">0</p>
+  <button id="incrementBtn">Increment</button>
 
-		 const counterParagraph = document.getElementById('counter');
-  const incrementButton = document.getElementById('incrementBtn');
+  <script>
+    // Get references to the counter element and the button
+    const counterElement = document.getElementById('counter');
+    const incrementBtn = document.getElementById('incrementBtn');
 
-  incrementButton.addEventListener('click', function() {
-    let counterValue = parseInt(counterParagraph.textContent);
-    alert("Current Counter Value: " + counterValue);
-    counterValue++;
-    counterParagraph.textContent = counterValue;
-  });
-</script>
+    // Add event listener to the button
+    incrementBtn.addEventListener('click', function() {
+      // Get the current counter value
+      let currentValue = parseInt(counterElement.textContent);
 
+      // Display an alert with the un-incremented value
+      alert("Counter value before increment: " + currentValue);
+
+      // Increment the counter value
+      currentValue++;
+
+      // Update the counter text
+      counterElement.textContent = currentValue;
+    });
+  </script>
 </body>
-
 </html>
